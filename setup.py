@@ -9,36 +9,16 @@ from setuptools import find_packages, setup
 from todi import __app_name__, __version__
 
 
-def get_readme() -> str:
-    """
-    Read README file.
-    :return: String with the content.
-    """
-    with open(file=os.path.join("README.md"), mode="r", encoding="utf-8") as content:
-        return content.read()
-
-
-def get_requirements() -> List[str]:
-    """
-    Read Requirements file.
-    :return: List of strings with dependencies.
-    """
-    with open(
-        file=os.path.join("requirements.txt"), mode="r", encoding="utf-8"
-    ) as content:
-        return list(content.read().split("\n"))
-
-
 setup(
     name=__app_name__,
     version=__version__,
     description="Minimal CLI TODO app.",
-    long_description=get_readme(),
+    long_description="Another CLI To-Do app. Made to be simple and easy to use.",
     long_description_content_type="text/markdown",
     author="Luis Ch.",
     author_email="email@luisch.com",
     packages=find_packages(include=[__app_name__]),
-    install_requires=get_requirements(),
+    install_requires=["rich", "tinydb", "typer", "typing"],
     url="https://github.com/luisgdev/todi",
     entry_points={
         "console_scripts": [
