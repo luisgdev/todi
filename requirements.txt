@@ -1,0 +1,4 @@
+rich
+tinydb
+typer
+typing
