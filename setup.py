@@ -1,5 +1,7 @@
 """ Setup file """
 
+import os
+
 from typing import List
 
 from setuptools import find_packages, setup
@@ -12,7 +14,7 @@ def get_readme() -> str:
     Read README file.
     :return: String with the content.
     """
-    with open(file="README.md", mode="r", encoding="utf-8") as content:
+    with open(file=os.path.join("README.md"), mode="r", encoding="utf-8") as content:
         return content.read()
 
 
@@ -21,7 +23,9 @@ def get_requirements() -> List[str]:
     Read Requirements file.
     :return: List of strings with dependencies.
     """
-    with open(file="requirements.txt", mode="r", encoding="utf-8") as content:
+    with open(
+        file=os.path.join("requirements.txt"), mode="r", encoding="utf-8"
+    ) as content:
         return list(content.read().split("\n"))
 
 
