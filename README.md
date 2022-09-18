@@ -2,9 +2,12 @@
 Another CLI To-Do app.
 Made to be simple and easy to use.
 
-# Usage
-- See a list of all available commands.
+# Install
+        pip install todi
 
-        python3 -m todi --help
+# Usage
+See a list of all available commands:
+        
+        todi --help
 
 ### Ongoing project...
