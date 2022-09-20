@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Project local data
-db/
+.todi/

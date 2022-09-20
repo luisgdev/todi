@@ -7,12 +7,14 @@ from tinydb import Query, TinyDB, operations
 from tinydb.table import Document
 
 from todi import utils
-from todi.constants import DB_DIR, DB_PATH
+from todi.constants import DB_NAME, NEW_DB_DIR
 from todi.models import Status
 
-if not os.path.exists(DB_DIR):
-    os.makedirs(DB_DIR)
-db = TinyDB(os.path.join(DB_DIR, DB_PATH))
+# Check if db folder exists
+utils.check_db_dir()
+
+# Prepare db
+db = TinyDB(os.path.join(NEW_DB_DIR, DB_NAME))
 
 
 def add_task(content: str) -> int:
@@ -21,7 +23,9 @@ def add_task(content: str) -> int:
     :param content: String with the task content.
     :return: None
     """
-    return db.insert(dict(content=content, status=Status.TODO, date=utils.get_date()))
+    return db.insert(
+        dict(content=content, status=Status.TODO, date=utils.get_date())
+    )
 
 
 def update_task(id_: int, content: str) -> List[int]:

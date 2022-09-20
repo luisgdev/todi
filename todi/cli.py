@@ -38,7 +38,9 @@ def list_tasks() -> None:
 
 
 @app.command()
-def add(content: str = typer.Argument(..., help="Content of the task.")) -> None:
+def add(
+    content: str = typer.Argument(..., help="Content of the task.")
+) -> None:
     """
     Create a new task. \f
     :return: None

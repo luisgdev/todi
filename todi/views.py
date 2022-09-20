@@ -26,7 +26,9 @@ def all_tasks() -> None:
         table.add_column("Date")
         for i, item in enumerate(tasks):
             task = Task(**item)
-            table.add_row(str(tasks[i].doc_id), task.content, task.status, task.date)
+            table.add_row(
+                str(tasks[i].doc_id), task.content, task.status, task.date
+            )
         console.print(table)
     else:
         console.print(Markdown("No pending tasks!"))
