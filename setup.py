@@ -23,21 +23,6 @@ def _get_readme() -> str:
         return content.read()
 
 
-def _get_requirements() -> List[str]:
-    """
-    Get Requirements list.
-    :return: List of strings with dependencies.
-    """
-    with open(
-        file=os.path.join(
-            os.path.abspath(os.path.dirname(__file__)), "requirements.txt"
-        ),
-        mode="r",
-        encoding="utf-8",
-    ) as content:
-        return list(content.read().split("\n"))
-
-
 setup(
     name=__app_name__,
     version=__version__,
@@ -47,7 +32,7 @@ setup(
     author="Luis Ch.",
     author_email="email@luisch.com",
     packages=find_packages(include=[__app_name__]),
-    install_requires=_get_requirements(),
+    install_requires=["rich", "tinydb", "typer", "typing"],
     url="https://github.com/luisgdev/todi",
     entry_points={
         "console_scripts": [
