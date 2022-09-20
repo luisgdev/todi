@@ -21,7 +21,7 @@ class Task(NamedTuple):
     """
 
     content: str
-    status: Status
+    status: str
     date: str
 
 

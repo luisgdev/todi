@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.0.3] - 2022-09-20
+
+### Fixed
+- `Todi` has being creating the db directory on every directory it was being called. Causing that sometimes, there was **no pending tasks**.
+    - From now on, the database directory will be created on `home/`.
+- Type hints errors detected by `mypy`.
+
 ## [0.0.2] - 2022-09-20
 
 ### Added

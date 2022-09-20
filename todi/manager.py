@@ -38,7 +38,7 @@ def update_task(id_: int, content: str) -> List[int]:
     return db.update(operations.set("content", content), doc_ids=[id_])
 
 
-def update_status(id_: int, status: Status) -> List[int]:
+def update_status(id_: int, status: str) -> List[int]:
     """
     Update a given task. \f
     :param id_: ID of the task.
