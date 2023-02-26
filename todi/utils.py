@@ -4,7 +4,7 @@ import os
 import shutil
 import time
 
-from todi.constants import DATE_FORMAT, DB_DIR, DB_NAME, NEW_DB_DIR
+from todi.constants import DATE_FORMAT, DB_DIR, DB_NAME
 
 
 def get_date() -> str:
@@ -21,15 +21,8 @@ def check_db_dir() -> None:
     move file from old to new directory.
     :return: None.
     """
-    if not os.path.exists(NEW_DB_DIR):
-        os.makedirs(NEW_DB_DIR)
-    if os.path.exists(DB_DIR) and os.path.isfile(
-        os.path.join(DB_DIR, DB_NAME)
-    ):
-        shutil.move(
-            src=os.path.join(DB_DIR, DB_NAME),
-            dst=os.path.join(NEW_DB_DIR, DB_NAME),
-        )
+    if not os.path.exists(DB_DIR):
+        os.makedirs(DB_DIR)
 
 
 if __name__ == "__main__":
