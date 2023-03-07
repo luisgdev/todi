@@ -12,11 +12,18 @@ So yes, you can install it from `pip` or clone/fork this project.
 - 📝 `List`, `Add`, `Update` and `Delete` tasks.
 - ✔️ Change status: `TODO` (default), `DOING` and `DONE`.
 - 🗑️ `Clean` command to remove `DONE` tasks.
+- 💾 `Export` and `Import` todi backups.
 
 
 # Install
 
         pip install todi
+
+
+# Upgrade
+
+        pip install --upgrade todi
+
 
 
 # Usage
