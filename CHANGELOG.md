@@ -7,17 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.3] - 2023-03-06
 
-### Fixed
-- Missing docstrings.
-- Removed docstrings from help messages.
-
-### Change
-- Database directory is now `~/.todi/`. 
-
 ### Added
 - New feature: Import and Export todi databases.
     - Import from anywhere, by indicating the path of the backup file.
     - Backup files are exported to `~/todi_backups/` directory. 
+
+### Fixed
+- Missing docstrings.
+- Removed docstrings from help messages.
+
+### Changed
+- Database directory is now `~/.todi/`. 
 
 
 ## [0.0.2] - 2022-09-20
