@@ -1,9 +1,9 @@
 """Tests for utils module"""
 
+import re
 from pprint import pformat
 
-import re
-from todi.utils import get_date
+from todi.utils import get_iso_date
 
 
 def _check_date_format(iso_date: str) -> bool:
@@ -32,7 +32,7 @@ def test_get_date() -> None:
     Test get_date function from utils module.
     :return: None
     """
-    tmp_date: str = get_date()
+    tmp_date: str = get_iso_date()
     assert _check_date_format(tmp_date)
     assert _check_date_format("20220-10-10") is False
     assert _check_date_format("202-10-10") is False
